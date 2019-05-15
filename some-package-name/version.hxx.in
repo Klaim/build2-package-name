@@ -1,0 +1,33 @@
+#pragma once
+
+// The numeric version format is AAABBBCCCDDDE where:
+//
+// AAA - major version number
+// BBB - minor version number
+// CCC - bugfix version number
+// DDD - alpha / beta (DDD + 500) version number
+// E   - final (0) / snapshot (1)
+//
+// When DDDE is not 0, 1 is subtracted from AAABBBCCC. For example:
+//
+// Version      AAABBBCCCDDDE
+//
+// 0.1.0        0000010000000
+// 0.1.2        0000010010000
+// 1.2.3        0010020030000
+// 2.2.0-a.1    0020019990010
+// 3.0.0-b.2    0029999995020
+// 2.2.0-a.1.z  0020019990011
+//
+#define SOME_PACKAGE_NAME_VERSION       $some_package_name.version.project_number$ULL
+#define SOME_PACKAGE_NAME_VERSION_STR   "$some_package_name.version.project$"
+#define SOME_PACKAGE_NAME_VERSION_ID    "$some_package_name.version.project_id$"
+
+#define SOME_PACKAGE_NAME_VERSION_MAJOR $some_package_name.version.major$
+#define SOME_PACKAGE_NAME_VERSION_MINOR $some_package_name.version.minor$
+#define SOME_PACKAGE_NAME_VERSION_PATCH $some_package_name.version.patch$
+
+#define SOME_PACKAGE_NAME_PRE_RELEASE   $some_package_name.version.pre_release$
+
+#define SOME_PACKAGE_NAME_SNAPSHOT_SN   $some_package_name.version.snapshot_sn$ULL
+#define SOME_PACKAGE_NAME_SNAPSHOT_ID   "$some_package_name.version.snapshot_id$"

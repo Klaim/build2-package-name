@@ -1,0 +1,6 @@
+$out_root/
+{
+  include some-package-name/
+}
+
+export $out_root/some-package-name/$import.target
